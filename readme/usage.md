@@ -1,0 +1,2 @@
+    --list, -l - Display a full list of invoices
+    --help, -h - Display this message

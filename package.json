@@ -1,0 +1,71 @@
+{
+  "name": "freshbooks-cli-invoice",
+  "version": "0.0.0",
+  "description": "A command-line interface for interacting with Freshbooks Invoices",
+  "main": "index.js",
+  "directories": {
+    "man": "man",
+    "doc": "readme",
+    "lib": "lib"
+  },
+  "bin": {
+    "freshbooks-invoice": "./bin/freshbooks-invoice"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "preferGlobal": true,
+  "author": {
+    "name": "Logan Koester",
+    "email": "logan@logankoester.com",
+    "url": "http://logankoester.com"
+  },
+  "dependencies": {
+    "nopt": "~2.1.2",
+    "nconf": "~0.6.8",
+    "freshbooks": "~0.2.1",
+    "freshbooks-cli-config": "~0.3.0",
+    "nodemock": "~0.2.17",
+    "lodash": "~2.2.1",
+    "cliff": "~0.1.8",
+    "moment": "~2.4.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-bump": "0.0.11",
+    "nixt": "0.0.1",
+    "grunt-contrib-nodeunit": "~0.2.2",
+    "grunt-readme-generator": "~0.3.41",
+    "marked-man": "0.0.2",
+    "marked": "~0.2.10",
+    "grunt-contrib-copy": "~0.4.1"
+  },
+  "keywords": [
+    "freshbooks-cli",
+    "freshbooks",
+    "invoices",
+    "timetracking",
+    "billing",
+    "stripe"
+  ],
+  "homepage": "https://github.com/logankoester/freshbooks-cli-invoice",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/logankoester/freshbooks-cli-invoice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/logankoester/freshbooks-cli-invoice/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/logankoester/freshbooks-cli-invoice/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  }
+}
