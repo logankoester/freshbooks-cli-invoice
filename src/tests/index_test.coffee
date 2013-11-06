@@ -31,3 +31,19 @@ exports.group =
         .run('freshbooks_config=tests/config_file bin/freshbooks-invoice --list')
         .code(0)
         .end(test.done)
+
+  '--create (--data)': (test) ->
+    env = 'freshbooks_config=tests/config_file'
+    json = JSON.stringify
+      client_id: 1
+      status: 'draft'
+      notes: 'test invoice'
+
+    test.doesNotThrow ->
+      nixt()
+        .expect (result) ->
+          if !(result.stdout.match(/test invoice/))
+            return new Error('Invoice notes should be printed')
+        .run("#{env} bin/freshbooks-invoice --create --data '#{json}'")
+        .code(0)
+        .end(test.done)

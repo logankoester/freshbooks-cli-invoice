@@ -28,6 +28,22 @@
           }
         }).run('freshbooks_config=tests/config_file bin/freshbooks-invoice --list').code(0).end(test.done);
       });
+    },
+    '--create (--data)': function(test) {
+      var env, json;
+      env = 'freshbooks_config=tests/config_file';
+      json = JSON.stringify({
+        client_id: 1,
+        status: 'draft',
+        notes: 'test invoice'
+      });
+      return test.doesNotThrow(function() {
+        return nixt().expect(function(result) {
+          if (!(result.stdout.match(/test invoice/))) {
+            return new Error('Invoice notes should be printed');
+          }
+        }).run("" + env + " bin/freshbooks-invoice --create --data '" + json + "'").code(0).end(test.done);
+      });
     }
   };
 

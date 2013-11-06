@@ -1,11 +1,13 @@
 nodemock = require 'nodemock'
+_ = require 'lodash'
 
 module.exports = class Freshbooks
   constructor: (base_uri, api_token) ->
 
   Invoice: class Invoice
     constructor: ->
-      return nodemock
+
+      mocked = nodemock
         .mock('list')
         .takes (err, invoices) ->
           invoices
@@ -23,3 +25,15 @@ module.exports = class Freshbooks
             }
           ]
         ])
+
+        mocked.mock('create')
+          .takes (err, invoice) ->
+            invoice
+          .calls(0, [
+            null,
+            _.extend(mocked, {
+              invoice_id: 999
+            })
+          ])
+
+        return mocked

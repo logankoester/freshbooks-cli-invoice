@@ -1,5 +1,5 @@
 (function() {
-  var conf, displayHelp, exec, getFreshbooks, list, nopt, parsedOptions, path;
+  var after, conf, create, data, displayHelp, exec, getFreshbooks, list, nopt, parsedOptions, path;
 
   path = require('path');
 
@@ -35,14 +35,36 @@
 
   parsedOptions = nopt({
     list: Boolean,
+    create: Boolean,
+    data: String,
     help: Boolean
   }, {
     l: ['--list'],
+    c: ['--create'],
     h: ['--help']
   }, process.argv, 2);
 
   if (parsedOptions.help) {
     displayHelp();
+  } else if (parsedOptions.create) {
+    create = require('./lib/create');
+    after = function(err, invoice) {
+      if (err) {
+        console.error(err);
+      }
+      return console.log(create.formatters.json(invoice));
+    };
+    if (data = parsedOptions.data) {
+      create.create(getFreshbooks(), JSON.parse(data), after);
+    } else {
+      data = '';
+      process.stdin.on('data', function(chunk) {
+        return data += chunk;
+      });
+      process.stdin.on('end', function() {
+        return create.create(getFreshbooks(), JSON.parse(data), after);
+      });
+    }
   } else if (parsedOptions.list) {
     list = require('./lib/list');
     list.get(getFreshbooks(), function(err, invoices) {
