@@ -1,8 +1,14 @@
-# freshbooks-cli-invoice 
-[![Build Status](https://secure.travis-ci.org/logankoester/freshbooks-cli-invoice.png?branch=master)](http://travis-ci.org/logankoester/freshbooks-cli-invoice)
-
+# FreshBooks: CLI Invoice
 > A command-line interface for interacting with Freshbooks Invoices
 
+[![Build Status](https://secure.travis-ci.org/logankoester/freshbooks-cli-invoice.png?branch=master)](http://travis-ci.org/logankoester/freshbooks-cli-invoice)
+[![status](https://sourcegraph.com/api/repos/github.com/logankoester/freshbooks-cli-invoice/badges/status.png)](https://sourcegraph.com/github.com/logankoester/freshbooks-cli-invoice)
+[![Dependency Status](https://david-dm.org/logankoester/freshbooks-cli-invoice.png)](https://david-dm.org/logankoester/freshbooks-cli-invoice)
+[![devDependency Status](https://david-dm.org/logankoester/freshbooks-cli-invoice/dev-status.png)](https://david-dm.org/logankoester/freshbooks-cli-invoice#info=devDependencies)
+[![Gittip](http://img.shields.io/gittip/logankoester.png)](https://www.gittip.com/logankoester/)
+
+
+[![NPM](https://nodei.co/npm/freshbooks-cli-invoice.png?downloads=true)](https://nodei.co/npm/freshbooks-cli-invoice/)
 ## Overview
 
 [freshbooks-cli](https://github.com/logankoester/freshbooks-cli) is a
@@ -59,4 +65,10 @@ To contribute back, fork the repo and open a pull request with your changes.
 Copyright (c) 2013 Logan Koester
 Licensed under the MIT license.
 
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/logankoester/freshbooks-cli-invoice/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
+[![xrefs](https://sourcegraph.com/api/repos/github.com/logankoester/freshbooks-cli-invoice/badges/xrefs.png)](https://sourcegraph.com/github.com/logankoester/freshbooks-cli-invoice)
+[![funcs](https://sourcegraph.com/api/repos/github.com/logankoester/freshbooks-cli-invoice/badges/funcs.png)](https://sourcegraph.com/github.com/logankoester/freshbooks-cli-invoice)
+[![top func](https://sourcegraph.com/api/repos/github.com/logankoester/freshbooks-cli-invoice/badges/top-func.png)](https://sourcegraph.com/github.com/logankoester/freshbooks-cli-invoice)
+[![library users](https://sourcegraph.com/api/repos/github.com/logankoester/freshbooks-cli-invoice/badges/library-users.png)](https://sourcegraph.com/github.com/logankoester/freshbooks-cli-invoice)
+[![authors](https://sourcegraph.com/api/repos/github.com/logankoester/freshbooks-cli-invoice/badges/authors.png)](https://sourcegraph.com/github.com/logankoester/freshbooks-cli-invoice)
